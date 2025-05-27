@@ -1,7 +1,7 @@
 module "avd_core_rule_collection_group" {
   #source = "../../modules/rule_collection_groups"
   source                                                   = "Azure/avm-res-network-firewallpolicy/azurerm//modules/rule_collection_groups"
-  firewall_policy_rule_collection_group_firewall_policy_id = var.firewall_policy.resource.id
+  firewall_policy_rule_collection_group_firewall_policy_id = "/subscriptions/981a6926-cb67-4ff6-95bc-c68e7768d03c/resourceGroups/rg-hub-westeurope/providers/Microsoft.Network/firewallPolicies/fwp-hub-westeurope"
   firewall_policy_rule_collection_group_name               = "NetworkRuleCollectionGroup"
   firewall_policy_rule_collection_group_priority           = 1000
   firewall_policy_rule_collection_group_network_rule_collection = [{
