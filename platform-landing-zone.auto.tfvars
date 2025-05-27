@@ -187,9 +187,6 @@ management_group_settings = {
   policy_assignments_to_modify = {
     alz = {
       policy_assignments = {
-        Enable-DDoS-VNET = {
-          enforcement_mode = "DoNotEnforce"
-        }
         Deploy-MDFC-Config-H224 = {
           parameters = {
             ascExportResourceGroupName                  = "$${asc_export_resource_group_name}"
