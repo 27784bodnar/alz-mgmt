@@ -44,12 +44,12 @@ custom_replacements = {
     dcr_vm_insights_name                    = "dcr-vm-insights"
 
     # Resource provisioning global connectivity
-    ddos_protection_plan_enabled = true
+    ddos_protection_plan_enabled = false
 
     # Resource provisioning primary connectivity
     primary_firewall_enabled                              = true
-    primary_virtual_network_gateway_express_route_enabled = true
-    primary_virtual_network_gateway_vpn_enabled           = true
+    primary_virtual_network_gateway_express_route_enabled = false
+    primary_virtual_network_gateway_vpn_enabled           = false
     primary_private_dns_zones_enabled                     = true
     primary_private_dns_auto_registration_zone_enabled    = true
     primary_private_dns_resolver_enabled                  = true # This setting currently has no effect, but will be implemented in a future release. To turn off the private DNS resolver, set the `primary_private_dns_zones_enabled` setting to `false`.
@@ -187,6 +187,13 @@ management_group_settings = {
     }
   }
   policy_assignments_to_modify = {
+    connectivity = {
+      policy_assignments = {
+        Enable-DDoS-VNET = {
+          enforcement_mode = "DoNotEnforce"
+        }
+      }
+    }
     alz = {
       policy_assignments = {
         Deploy-MDFC-Config-H224 = {
