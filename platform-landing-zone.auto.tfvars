@@ -118,8 +118,10 @@ enable_telemetry = true
 This variable can be used to apply tags to all resources that support it. Some resources allow overriding these tags.
 */
 tags = {
-  deployed_by = "terraform"
-  source      = "Azure Landing Zones Accelerator"
+  deployed_by       = "terraform"
+  source            = "Azure Landing Zones Accelerator"
+  CC                = "IT"
+  technical_contact = "ladislav.bodnar@outlook.com"
 }
 
 /*
